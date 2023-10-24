@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class activity_page2 extends AppCompatActivity {
-    EditText nombre, apellido, dividendo, divisor, numero;
+    EditText name, lastname, dividendo, divisor, number;
     Button siguiente, cerrar;
 
     ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
@@ -30,7 +30,7 @@ public class activity_page2 extends AppCompatActivity {
                         String[] resultado = data.getDataString().split("_");
                         dividendo.setText(resultado[1]);
                         divisor.setText(resultado[0]);
-                        numero.setText(resultado[2]);
+                        number.setText(resultado[2]);
                     }
                 }
             });
@@ -44,11 +44,11 @@ public class activity_page2 extends AppCompatActivity {
     }
 
     private void iniciarPagina() {
-        nombre = findViewById(R.id.editText_Nombres1);
-        apellido = findViewById(R.id.editText_Apellidos2);
+        name = findViewById(R.id.editText_Nombres1);
+        lastname = findViewById(R.id.editText_Apellidos2);
         dividendo = findViewById(R.id.editText_Dividendo2);
         divisor = findViewById(R.id.editText_Divisor2);
-        numero = findViewById(R.id.editText_NumeroInvertido2);
+        number = findViewById(R.id.editText_NumeroInvertido2);
         siguiente = findViewById(R.id.button_Siguiente2);
         cerrar = findViewById(R.id.button_cerrar2);
 
@@ -60,7 +60,7 @@ public class activity_page2 extends AppCompatActivity {
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String send = nombre.getText().toString() + "_"+ apellido.getText().toString() + "_" + dividendo.getText().toString() + "_" + divisor.getText().toString() + "_" + numero.getText().toString();
+                String send = name.getText().toString() + "_"+ lastname.getText().toString() + "_" + dividendo.getText().toString() + "_" + divisor.getText().toString() + "_" + number.getText().toString();
 
                 Intent intent = new Intent();
                 intent.setData(Uri.parse(send));
@@ -75,8 +75,8 @@ public class activity_page2 extends AppCompatActivity {
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombres = nombre.getText().toString();
-                String apellidos = apellido.getText().toString();
+                String nombres = name.getText().toString();
+                String apellidos = lastname.getText().toString();
 
                 Intent toThird = new Intent(activity_page2.this, activity_page3.class);
 

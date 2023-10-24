@@ -11,8 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class activity_page3 extends AppCompatActivity {
-
-    EditText nombre, apellido, dividendo, divisor, numero;
+    EditText name, lastname, dividendo, divisor, number;
     Button cerrar;
 
     @Override
@@ -32,12 +31,12 @@ public class activity_page3 extends AppCompatActivity {
             public void onClick(View view) {
                 dividendo = findViewById(R.id.editText_Dividendo3);
                 divisor = findViewById(R.id.editText_Divisor3);
-                numero = findViewById(R.id.editText_NumeroInvertido3);
+                number = findViewById(R.id.editText_NumeroInvertido3);
 
 
                 String divr = divisor.getText().toString();
                 String divd = dividendo.getText().toString();
-                String num = numero.getText().toString();
+                String num = number.getText().toString();
 
                 String send = divr + "_" + divd + "_" + num;
 
@@ -51,19 +50,16 @@ public class activity_page3 extends AppCompatActivity {
             }
         });
     }
-
     private void iniciarTercera() {
-        nombre = findViewById(R.id.editText_Nombres3);
-        apellido = findViewById(R.id.editText_Apellidos3);
+        name = findViewById(R.id.editText_Nombres3);
+        lastname = findViewById(R.id.editText_Apellidos3);
 
         Bundle extras = getIntent().getExtras();
 
         String nombres = extras.getString("nombres");
         String apellidos = extras.getString("apellidos");
 
-
-
-        nombre.setText(nombres);
-        apellido.setText(apellidos);
+        name.setText(nombres);
+        lastname.setText(apellidos);
     }
 }
