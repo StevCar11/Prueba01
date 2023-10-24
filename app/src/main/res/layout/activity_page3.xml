@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_page2">
+    tools:context=".activity_page3">
 
     <EditText
-        android:id="@+id/editText_Nombres1"
+        android:id="@+id/editText_Nombres3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginTop="52dp"
-        android:autofillHints=""
         android:ems="10"
+        android:enabled="false"
         android:hint="@string/editText_Hint_Nombres"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#757575" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView2"
@@ -25,49 +27,49 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="176dp"
-        android:text="@string/textView_Dividendo" />
+        android:text="@string/textView_Dividendo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_Dividendo2"
+        android:id="@+id/editText_Dividendo3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginTop="176dp"
-        android:autofillHints=""
         android:ems="10"
-        android:enabled="false"
         android:hint="@string/editText_Hint_Dividendo"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editText_NumeroInvertido2"
+        android:id="@+id/editText_NumeroInvertido3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginTop="296dp"
         android:autofillHints=""
         android:ems="10"
-        android:enabled="false"
-        android:hint="@string/editText_Hint_NumeroInvertido"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
-
-    <Button
-        android:id="@+id/button_Siguiente2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="388dp"
-        android:text="@string/button_siguinte" />
+        android:hint="@string/editText_Hint_Numero"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="296dp"
-        android:text="@string/textView_NumeroInvertido" />
+        android:text="@string/textView_Numero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -75,20 +77,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="52dp"
-        android:text="@string/textView_Nombres" />
+        android:text="@string/textView_Nombres"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_Divisor2"
+        android:id="@+id/editText_Divisor3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginTop="228dp"
-        android:autofillHints=""
         android:ems="10"
-        android:enabled="false"
         android:hint="@string/editText_Hint_Divisor"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView11"
@@ -96,29 +101,34 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="228dp"
-        android:text="@string/textView_Divisor" />
+        android:text="@string/textView_Divisor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_Apellidos2"
+        android:id="@+id/editText_Apellidos3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginTop="104dp"
         android:autofillHints=""
         android:ems="10"
+        android:enabled="false"
         android:hint="@string/editText_Hint_Apellidos"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#757575" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_cerrar2"
+        android:id="@+id/button_cerrar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="444dp"
-        android:enabled="false"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="440dp"
         android:text="@string/button_cerrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -127,6 +137,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="104dp"
-        android:text="@string/textView_Apellidos" />
+        android:text="@string/textView_Apellidos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </RelativeLayout>
