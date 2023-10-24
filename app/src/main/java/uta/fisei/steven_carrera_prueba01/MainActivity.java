@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -45,9 +46,67 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        iniciarPrograma();
+    }
+
+    private void iniciarPrograma() {
+        siguiente = findViewById(R.id.button_Siguiente1);
+        resultados = findViewById(R.id.button_resultados);
+
+        clickSiguiente();
+        clickResultados();
+    }
+
+    private void clickResultados() {
+
+        resultados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int divd = Integer.valueOf(dividendo.getText().toString());
+                int divr = Integer.valueOf(divisor.getText().toString());
+
+                int cos = 0;
+
+                while (divd > 0) {
+
+                    if (divd< divr) {
+                        break;
+                    }
+                    divd = divd - divr;
+                    cos++;
+                }
+
+                parteEntera.setText(String.valueOf(cos));
+                residuo.setText(String.valueOf(divd));
+
+
+                int invertido = 0, resto;
+
+
+                while( num > 0 ) {
+
+                    resto = num % 10;
+                    invertido = invertido * 10 + resto;
+                    num /= 10;
+                }
+
+                numero.setText(String.valueOf(invertido));
+            }
+
+        });
+    }
+
+    private void clickSiguiente() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toSecond = new Intent(MainActivity.this, activity_page2.class);
+                activityResult.launch(toSecond);
+            }
+        });
     }
 }
