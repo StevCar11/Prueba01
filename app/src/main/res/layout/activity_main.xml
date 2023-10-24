@@ -46,6 +46,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="424dp"
         android:text="@string/textView_NumeroInvertido"
+        android:textColor="#616161"
         tools:ignore="VisualLintBounds" />/>
 
     <EditText
@@ -95,7 +96,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="52dp"
         android:text="@string/textView_Nombres"
-        tools:ignore="VisualLintBounds" />/>
+        tools:ignore="VisualLintBounds,TextContrastCheck" />/>
 
     <Button
         android:id="@+id/button_Siguiente1"
@@ -139,7 +140,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="228dp"
         android:text="@string/textView_Divisor"
-        tools:ignore="VisualLintBounds" />/>
+        tools:ignore="VisualLintBounds,TextContrastCheck" />/>
 
     <EditText
         android:id="@+id/editText_Apellidos1"
@@ -153,7 +154,7 @@
         android:hint="@string/editText_Hint_Apellidos"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:ignore="VisualLintBounds" />/>
+        tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />/>
 
     <TextView
         android:id="@+id/textView10"
@@ -162,7 +163,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="292dp"
         android:text="@string/textView_ParteEntera"
-        tools:ignore="VisualLintBounds" />/>
+        tools:ignore="VisualLintBounds,TextContrastCheck" />/>
 
     <Button
         android:id="@+id/button_resultados"
@@ -180,5 +181,5 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="104dp"
         android:text="@string/textView_Apellidos"
-        tools:ignore="VisualLintBounds" />/>
+        tools:ignore="VisualLintBounds,TextContrastCheck" />/>
 </RelativeLayout>

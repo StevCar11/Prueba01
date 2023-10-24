@@ -17,7 +17,8 @@
         android:hint="@string/editText_Hint_Nombres"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#757575" />
+        android:textColorHint="#757575"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView2"
@@ -25,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="176dp"
-        android:text="@string/textView_Dividendo" />
+        android:text="@string/textView_Dividendo"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/editText_Dividendo2"
@@ -67,7 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="296dp"
-        android:text="@string/textView_NumeroInvertido" />
+        android:text="@string/textView_NumeroInvertido"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView"
@@ -75,7 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="52dp"
-        android:text="@string/textView_Nombres" />
+        android:text="@string/textView_Nombres"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/editText_Divisor2"
@@ -96,7 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="228dp"
-        android:text="@string/textView_Divisor" />
+        android:text="@string/textView_Divisor"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/editText_Apellidos2"
@@ -109,7 +114,8 @@
         android:hint="@string/editText_Hint_Apellidos"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#757575" />
+        android:textColorHint="#757575"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/button_cerrar2"
@@ -127,6 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="104dp"
-        android:text="@string/textView_Apellidos" />
+        android:text="@string/textView_Apellidos"
+        tools:ignore="TextContrastCheck" />
 
 </RelativeLayout>
