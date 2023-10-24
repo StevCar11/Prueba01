@@ -16,8 +16,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     int num;
-    Button siguiente, resultados;
-    EditText nombre, apellido, dividendo, divisor, parteEntera, residuo, numero;
+    Button sig, resultados;
+    EditText name, lastname, dividendo, divisor, partEntera, residuo, numero;
 
     ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -26,19 +26,19 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
 
                     if (result.getResultCode() == Activity.RESULT_OK){
-                        nombre = findViewById(R.id.editText_Nombres1);
-                        apellido = findViewById(R.id.editText_Apellidos1);
+                        name = findViewById(R.id.editText_Nombres1);
+                        lastname = findViewById(R.id.editText_Apellidos1);
                         dividendo = findViewById(R.id.editText_Dividendo1);
                         divisor = findViewById(R.id.editText_Divisor1);
-                        parteEntera = findViewById(R.id.editText_ParteEntera1);
+                        partEntera = findViewById(R.id.editText_ParteEntera1);
                         residuo = findViewById(R.id.editText_Residuo1);
                         numero = findViewById(R.id.editText_NumeroInvertido1);
 
                         Intent data = result.getData();
                         String[] resultado = data.getDataString().split("_");
                         resultados.setEnabled(true);
-                        nombre.setText(resultado[0]);
-                        apellido.setText(resultado[1]);
+                        name.setText(resultado[0]);
+                        lastname.setText(resultado[1]);
                         dividendo.setText(resultado[2]);
                         divisor.setText(resultado[3]);
                         num = Integer.valueOf(resultado[4]);
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void iniciarPrograma() {
-        siguiente = findViewById(R.id.button_Siguiente1);
+        sig = findViewById(R.id.button_Siguiente1);
         resultados = findViewById(R.id.button_resultados);
 
         clickSiguiente();
@@ -66,26 +66,25 @@ public class MainActivity extends AppCompatActivity {
         resultados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int divd = Integer.valueOf(dividendo.getText().toString());
+                int divid = Integer.valueOf(dividendo.getText().toString());
                 int divr = Integer.valueOf(divisor.getText().toString());
 
                 int cos = 0;
 
-                while (divd > 0) {
+                while (divid > 0) {
 
-                    if (divd< divr) {
+                    if (divid< divr) {
                         break;
                     }
-                    divd = divd - divr;
+                    divid = divid - divr;
                     cos++;
                 }
 
-                parteEntera.setText(String.valueOf(cos));
-                residuo.setText(String.valueOf(divd));
+                partEntera.setText(String.valueOf(cos));
+                residuo.setText(String.valueOf(divid));
 
 
                 int invertido = 0, resto;
-
 
                 while( num > 0 ) {
 
@@ -93,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
                     invertido = invertido * 10 + resto;
                     num /= 10;
                 }
-
                 numero.setText(String.valueOf(invertido));
             }
 
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clickSiguiente() {
-        siguiente.setOnClickListener(new View.OnClickListener() {
+        sig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent toSecond = new Intent(MainActivity.this, activity_page2.class);
