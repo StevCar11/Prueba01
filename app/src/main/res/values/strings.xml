@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Steven_Carrera_Prueba01</string>
+
+    <string name="textView_Nombres">Nombres: </string>
+    <string name="textView_Apellidos">Apellidos: </string>
+
+    <string name="textView_Dividendo">Dividendo: </string>
+    <string name="textView_Divisor">Divisor: </string>
+
+    <string name="textView_ParteEntera">Parte entera: </string>
+    <string name="textView_Residuo">Residuo: </string>
+
+    <string name="textView_NumeroInvertido">Numero invertido: </string>
+    <string name="textView_Numero">Numero: </string>
+
+    <string name="editText_Hint_Apellidos">Apellidos: </string>
+    <string name="editText_Hint_Nombres">Nombres: </string>
+
+    <string name="editText_Hint_Dividendo">Dividendo</string>
+    <string name="editText_Hint_Divisor">Divisor</string>
+
+    <string name="editText_Hint_ParteEntera">Parte Entera</string>
+    <string name="editText_Hint_Residuo">Residuo</string>
+
+    <string name="editText_Hint_NumeroInvertido">Numero Invertido: </string>
+    <string name="editText_Hint_Numero">Numero: </string>
+
+    <string name="button_siguinte">Siguiente</string>
+    <string name="button_resultado">Mostrar Resultados</string>
+    <string name="button_cerrar">Cerrar</string>
+
+</resources>
